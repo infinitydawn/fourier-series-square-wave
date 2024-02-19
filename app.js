@@ -8,7 +8,7 @@ let slider;
 
 function setup() {
     // Create a canvas of 600x400 pixels
-    createCanvas(600, 400);
+    createCanvas(1000, 800);
     slider = createSlider(1, 25, 1);
     slider.parent('slider-container')
 }
