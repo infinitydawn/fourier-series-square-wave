@@ -18,7 +18,7 @@ function draw() {
     background(0);
 
     // move the circle closer to center
-    translate(200, 200);
+    translate(300, 400);
 
 
 
@@ -35,7 +35,7 @@ function draw() {
         formula += `\\(\\Huge{\\frac{4 \\cdot \\sin(${n} \\cdot x)}{${n} \\pi}}\\)` + ` + `; // LaTeX format
         
 
-        let coefficient = 55 * (4 / (n * PI));
+        let coefficient = 55 * (10 / (n * PI));
 
 
         x += coefficient * cos(n * time);
@@ -62,9 +62,9 @@ function draw() {
     arr.unshift(y);
 
 
-    translate(100, 0)
+    translate(300, 0)
     stroke(255, 10, 5);
-    line(x - 100, y, 0, arr[0])
+    line(x - 300, y, 0, arr[0])
 
     stroke(255);
     //draw the wave from array
