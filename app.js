@@ -25,6 +25,9 @@ function draw() {
     let x = 0;
     let y = 0;
     let formula = "";
+    let formula2 = `\\[\\Large \\sum_{i=0}^{n} \\frac{4 \\cdot \\sin((2i + 1) \\cdot x)}{(2i + 1) \\pi}\\]`;
+    document.getElementById('math-formula2').innerHTML = formula2;
+    MathJax.typeset();
 
 
     for (let i = 0; i < slider.value(); i++) {
@@ -43,7 +46,7 @@ function draw() {
 
         stroke(255, 165, 0);
         noFill();
-        ellipse(prevX, prevY, coefficient * 2)
+        //ellipse(prevX, prevY, coefficient * 2)
 
 
         if (arr.length > 250) {
@@ -54,8 +57,16 @@ function draw() {
         line(prevX, prevY, x, y);
 
         stroke(255);
-    }
 
+        ellipse(prevX, prevY, coefficient * 2)
+
+    }
+   
+    
+    fill(255, 0, 0); // Set fill color to red
+stroke(255, 10, 10); // Set stroke color to a slightly different red, if you want the border to be visible
+ellipse(x, y, 10, 10); // Draw solid ellipse
+    
     
 
 
@@ -66,6 +77,8 @@ function draw() {
     stroke(255, 10, 5);
     line(x - 300, y, 0, arr[0])
 
+
+    noFill();
     stroke(255);
     //draw the wave from array
     beginShape();
