@@ -112,6 +112,7 @@ window.addEventListener("load", function () {
     
     sliderElem.addEventListener("change", function () {
         console.log(sliderElem.value)
+        formula ="";
         for(let i = 2; i < sliderElem.value; i++){
             formula += `\\(\\Huge{\\frac{4 \\cdot \\sin(${i} \\cdot x)}{${i} \\pi}}\\)` + ` + `; // LaTeX format
         }
