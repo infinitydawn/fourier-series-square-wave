@@ -114,7 +114,7 @@ window.addEventListener("load", function () {
         console.log(sliderElem.value)
         formula ="";
         for(let i = 0; i < sliderElem.value; i++){
-            formula += `\\(\\Huge{\\frac{4 \\cdot \\sin(${2i+1} \\cdot x)}{${2i+1} \\pi}}\\)` + ` + `; // LaTeX format
+            formula += `\\(\\Huge{\\frac{4 \\cdot \\sin(${i} \\cdot x)}{${i} \\pi}}\\)` + ` + `; // LaTeX format
         }
         document.getElementById('math-formula').innerHTML = formula;
         MathJax.typeset(); // Ask MathJax to render the formula
